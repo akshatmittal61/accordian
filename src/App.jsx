@@ -20,7 +20,7 @@ const App = () => {
 							your daily events, notes and tasks.
 							<div>
 								<a href="https://planner-61.herokuapp.com">
-									Planner
+									Planner: planner-61.herokuapp.com
 								</a>
 							</div>
 						</div>

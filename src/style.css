@@ -6,7 +6,6 @@
 
 :root {
   --bgcolor: #f0f0f0;
-  --bgcolor-100: #e1e1e1;
   --tcolor: #121212;
   --back-shadow: rgba(0, 0, 0, 0.2);
   --transition-time: 200ms; }

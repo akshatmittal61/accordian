@@ -1,18 +1,22 @@
+:root {
+  --accordian-bgcolor: #e1e1e1;
+  --accordian-transition-time: 200ms; }
+
 .accordian {
   width: 75%;
   margin: 0 auto;
-  background-color: var(--bgcolor-100);
+  background-color: var(--accordian-bgcolor);
   display: flex;
   flex-flow: column;
   overflow: hidden;
   border-radius: 0.25rem;
-  transition: all var(--transition-time) ease-in-out;
+  transition: all var(--accordian-transition-time) ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px; }
   .accordian > * {
     width: 100%;
     padding: 1rem;
     overflow: hidden;
-    transition: all var(--transition-time) cubic-bezier(0.4, 0, 0.2, 1); }
+    transition: all var(--accordian-transition-time) cubic-bezier(0.4, 0, 0.2, 1); }
   .accordian-header {
     display: flex;
     justify-content: space-between;
@@ -35,7 +39,7 @@
     .accordian-header-icon {
       width: 5%; }
       .accordian-header-icon .material-icons {
-        transition: all var(--transition-time) cubic-bezier(0.4, 0, 0.2, 1); }
+        transition: all var(--accordian-transition-time) cubic-bezier(0.4, 0, 0.2, 1); }
   .accordian-expand-false {
     margin: 0.025rem auto; }
   .accordian-expand-true {

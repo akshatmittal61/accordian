@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Accordian
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a basic Accordian component.
+<br />
+It can be used further in any react project.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To use Accordian in your project copy the Accordian folder in your React Project and import the Accordian component
 
-### `npm start`
+```js
+import Accordian from "./Accordian/Accordian.jsx";
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To use the Accordian component
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```html
+<Accordian />
+```
 
-### `npm test`
+-   **Note**: Make Sure you have included Google Material Icons import in your $public/index.html$ file
+    <br />
+    If not copy and paste it inside <code>&lt;head&gt;</code> in your file
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```html
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
+<link
+	href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet"
+/>
+```
 
-### `npm run build`
+## Props
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   **summary** - JSX/string: for Accordian summary/title
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   **details** - JSX/string: for Accordian content/details
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   **defaultExpanded** - boolean: true/false to expand/collapse the Accordian on component mount
 
-### `npm run eject`
+## Examples
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   **Simple Accordian**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```html
+<Accordian />
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   **Simple Accordian with custom values**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```html
+<Accordian summary="Title Here" details="Content Here" />
+```
 
-## Learn More
+-   **Advanced Accordian with JSX**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```html
+<Accordian
+	summary={<div className="title">Getting Started with Planner</div>}
+	details={
+		<div className="content">
+			Get more done with Planner. Manage, capture and edit your daily
+			events, notes and tasks.
+			<div>
+				<a href="https://planner-61.herokuapp.com">
+					Planner: planner-61.herokuapp.com
+				</a>
+			</div>
+		</div>
+	}
+	defaultExpanded
+/>
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Styles
 
-### Code Splitting
+The color and transition time are declared in Accordian.css file
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```css
+:root {
+	--accordian-bgcolor: #e1e1e1;
+	--accordian-transition-time: 200ms;
+}
+```
 
-### Analyzing the Bundle Size
+Stylesheet can further be customized as per convinience (not recommended)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Screenshots
 
-### Making a Progressive Web App
+<p align="center">
+<img src="./public/images/ss.png" />
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Author
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Akshat Mittal](https://github.com/akshatmittal61)
